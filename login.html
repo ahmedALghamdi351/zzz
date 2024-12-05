@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <meta charset="UTF-8">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background: #d2cfcc;
+      color: #333;
+    }
+
+    .a {
+      margin-top: 10%;
+      text-align: center;
+      color: white;
+    }
+
+   
+
+    .b {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .b:focus {
+      border-color: rgb(63, 76, 50 );
+      box-shadow: 0 0 5px rgb(63, 76, 50 );
+      outline: none;
+    }
+
+    .d {
+      width: 105%;
+      padding: 12px;
+      background-color: rgb(63, 76, 50 );
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .d:hover {
+      background-color:rgb(63, 76, 50 );
+    }
+
+    .q a {
+      color: rgb(63, 76, 50 );
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .q a:hover {
+      color:rgb(63, 76, 50 );
+    }
+
+    @media (max-width: 768px) {
+      .a {
+        margin-top: 20%;
+      }
+
+      
+      
+    }
+    .z {
+      color: black;
+
+    }
+  </style>
+</head>
+<body>
+
+<div class="a">
+  <h2>Login</h2>
+</div>
+
+<div  style="max-width: 500px; margin: auto;">
+  <form id="e">
+    <label for="email"><b>Email*</b></label>
+    <input class="b" type="email" id="email" name="email" placeholder="Enter your email">
+    
+    <label for="password"><b>Password*</b></label>
+    <input class="b" type="password" id="password" name="password" placeholder="Enter your password">
+    <p><INPUT type="checkbox" name="login" id="loged"> Stay logged in</p>
+    <button class="d q" type="submit">Login</button>
+  </form>
+  
+  <p class="z q">Don't have an account? <a href="#">Sign up</a></p>
+</div>
+
+<script>
+  document.getElementById("e").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    if (email && password) {
+      alert("Login successful!");
+      window.location.href = "main page.html";
+    } else {
+      alert("Please fill in both fields.");
+    }
+    });
+</script>
+
+</body>
+</html>
